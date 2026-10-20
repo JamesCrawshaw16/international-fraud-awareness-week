@@ -1,1 +1,24 @@
-{"rewrites":[{"source":"/tickets","destination":"/index.html"},{"source":"/deepfake","destination":"/index.html"},{"source":"/events","destination":"/index.html"},{"source":"/bins","destination":"/index.html"}]}
+{
+  "rewrites": [
+    {
+      "source": "/tickets",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/deepfake",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/events",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/bins",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/cafe",
+      "destination": "/index.html"
+    }
+  ]
+}
