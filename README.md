@@ -1,15 +1,16 @@
-# Four Paths to Fraud
+# Paths to Fraud
 
-Static, mobile-first workplace fraud-awareness simulation.
+Mobile-first workplace fraud-awareness simulation.
 
 ## Routes
 - `/tickets`
 - `/deepfake`
 - `/events`
 - `/bins`
+- `/cafe` — Cafe One menu, Leeds Office, floor 6
 
 ## Deploy
-Upload the folder to a GitHub repository and import it as a Vercel project (Framework Preset: Other; root directory: repository root). The `vercel.json` rewrites make each route work on refresh.
+Import this repository into Vercel (Framework Preset: Other). Route rewrites are in `vercel.json`.
 
-## Privacy
-The submitted email is parsed entirely in the browser to extract a first name; no network request, analytics, or storage is implemented. No shared counter is implemented yet. The app is explicitly labelled an authorised awareness simulation.
+## Privacy and counter
+Email is parsed only in the browser to personalise the reveal, then cleared. The counter API receives only the campaign key, never the email or name. Anonymous completion events increment `ifa:reveals:total` and `ifa:reveals:<campaign>` in Redis. Counts represent completions, not unique employees. Configure `KV_REST_API_URL` and `KV_REST_API_TOKEN` (or the corresponding `UPSTASH_REDIS_REST_*` variables) on Vercel.
